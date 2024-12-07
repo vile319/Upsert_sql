@@ -11,7 +11,7 @@ pip install sql_upsert
 ## Usage
 
 ```python
-from sql_upsert import to_sql_upsert
+import sql_upsert as pdu
 import pandas as pd
 from sqlalchemy import create_engine
 
@@ -22,7 +22,7 @@ engine = create_engine('sqlite:///example.db')
 df = pd.DataFrame({'id': [1, 2], 'value': ['a', 'b']})
 
 # Write with upsert functionality
-to_sql_upsert(df, 'my_table', engine, unique_columns=['id'])
+pdu.to_sql_upsert(df, 'my_table', engine, unique_columns=['id'])
 ```
 
 ## Features
