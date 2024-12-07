@@ -8,12 +8,12 @@ setup(
         "sqlalchemy>=1.4.0",
         "pandas>=1.0.0"
     ],
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="vile319",
+    author_email="vile319@gmail.com",
     description="A package for handling SQL upsert operations with pandas DataFrames",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/sql_upsert",
+    url="https://github.com/vile319/sql_upsert",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
