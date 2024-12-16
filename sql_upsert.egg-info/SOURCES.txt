@@ -1,0 +1,9 @@
+README.md
+setup.py
+sql_upsert/__init__.py
+sql_upsert/upsert.py
+sql_upsert.egg-info/PKG-INFO
+sql_upsert.egg-info/SOURCES.txt
+sql_upsert.egg-info/dependency_links.txt
+sql_upsert.egg-info/requires.txt
+sql_upsert.egg-info/top_level.txt

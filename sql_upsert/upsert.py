@@ -39,14 +39,14 @@ def to_sql_upsert(df, table_name, engine, unique_columns):
         unique_columns (list): List of columns for unique constraint
         
     Returns:
-        None
+        pandas.DataFrame: The DataFrame that was written to SQL
         
     Usage:
         >>> import pandas as pd
         >>> from sqlalchemy import create_engine
         >>> engine = create_engine('sqlite:///example.db')
         >>> df = pd.DataFrame({'id': [1, 2], 'value': ['a', 'b']})
-        >>> to_sql_upsert(df, 'my_table', engine, ['id'])
+        >>> df_written = to_sql_upsert(df, 'my_table', engine, ['id'])
     """
     inspector = sqlalchemy.inspect(engine)
     
@@ -61,4 +61,7 @@ def to_sql_upsert(df, table_name, engine, unique_columns):
     df.to_sql(table_name, engine, if_exists='append', index=False)
     
     if not has_constraint:
-        create_table_with_unique_constraint(table_name, engine, unique_columns) 
+        create_table_with_unique_constraint(table_name, engine, unique_columns)
+        
+    return df
+    
